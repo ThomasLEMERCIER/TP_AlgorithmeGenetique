@@ -4,6 +4,8 @@
 
 ### Compléter la définition de la classe d'un individu vectoriel
 
+Ensemble des fonctions à completer se trouve dans le fichier individual_vector.py.
+
 #### Méthode d'initialisation
 1. Définir les attributs nécessaires
     <details>
@@ -11,9 +13,9 @@
     
     * Dimension du vecteur (shape)
     * Interval de recherche (starting_interval)
-    * Score de l'individu
+    * Score de l'individu (fitness_score)
     * Fonction de score (fitness_function)
-    * Chromosome de l'individu
+    * Chromosomes de l'individu (chromosomes)
     
     </details>
 
@@ -44,22 +46,24 @@
 
 ### Completer la définition de la classe de l'algorithme génétique
 
+Ensemble des fonctions à completer se trouve dans le fichier AlgoGen.py.
+
 #### Méthode d'initialisation :
 1. Définir les attributs nécessaires
     <details>
     <summary>Spoiler warning</summary>
     
-    * Population
+    * Population (population)
     * Taille de la population (pop_size)
     * Fréquence de mutation (mutation_rate)
     * Fréquence de crossover (crossover_rate)
-    * Meilleur individu
+    * Meilleur individu (best_indv)
     
     </details>
 2. Génération de la population initiale
 
 
-#### Méthode de sélection des parents
+#### Méthode _parents_selection_  : Sélection des parents
 1. Dans un premier temps la méthode du tournoi suffira
     <details>
     <summary>Spoiler warning</summary>
@@ -72,7 +76,7 @@
         
     </details>
 
-#### Méthode de sélection des survivants
+#### Méthode _survivor_selection_ : Sélection des survivants
 
 1. Utiliser la sélection par le score
     <details>
@@ -85,14 +89,24 @@
         
     </details>
 
-#### Méthode d'une itération de l'algorithme
-1. Initialiser une futur population vide
-2. Effectuer les crossovers pour peupler la futur population
-3. Muter la futur population
-4. Définir la nouvelle population grâce à la méthode de sélection des survivants
+#### Méthode _step_ : Une itération de l'algorithme
+1. Effectuer les crossovers pour peupler la population
+2. Muter  population
+3. Définir la nouvelle population grâce à la méthode de sélection des survivants
 
 
 ## Approximation du problème du voyageur de commerce
+
+[Description du problème](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce)
+
+Pour représenter un chemin possible en passant par les n villes du problème on numérote les villes de 0 à n-1. Puis on prend une permutation de [0;n-1].
+
+Exemple:
+Pour n = 5,
+
+[1,2,3,4,0] -> Le voyageur commence à la ville 1 puis 2 etc... jusqu'à revenir en 1 après la ville 0.
+
+Ensemble des fonctions à completer se trouve dans le fichier individual_path.py.
 
 ### Completer la définition de la classe d'un individu chemin
 
@@ -102,13 +116,14 @@
     <summary>Spoiler warning</summary>
     
     * Nombre de ville (shape)
-    * Score de l'individu
+    * Score de l'individu (fitness_score)
     * Fonction de fitness (fitness_function)
-    * Chromosome de l'individu
+    * Chromosomes de l'individu (chromosomes)
 
     </details>
 
 2. Création du chromosome associé à l'individu
+
 3. Initialialisation du score de l'individu
 
 #### Méthode de crossover
@@ -172,8 +187,3 @@ Description de l'algorithme :
 ![OX1 algorithm](./images/OX1.PNG)
 
 [Publication originale pour les deux nouvelles méthodes](https://link.springer.com/content/pdf/10.1023/A:1006529012972.pdf)
-
-
-
-
-

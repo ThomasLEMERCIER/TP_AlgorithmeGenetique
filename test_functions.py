@@ -84,7 +84,7 @@ def lvl5(X, show=False, time_to_plot=5):
 
 
 def lvl6(X, show=False, time_to_plot=5):
-    """Dimension 2, minimum en (0, 0)"""
+    """Dimension 2, minimum en (2, 1)"""
     a = [3, 5, 2, 1, 7]
     b = [5, 2, 1, 4, 9]
     c = [1, 2, 5, 2, 3]
@@ -95,7 +95,7 @@ def lvl6(X, show=False, time_to_plot=5):
     return -result
 
 
-def lvl7(X, show=False, legend='lvl7', time_to_plot=5):
+def lvl7(X, show=False, time_to_plot=5):
     """Dimension minimale 10, la dimension doit toujours être pair, minimum pour un cercle"""
     dist = 0
     nb_point = len(X)/2
@@ -110,7 +110,7 @@ def lvl7(X, show=False, legend='lvl7', time_to_plot=5):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
         plt.plot(np.cos(theta), np.sin(theta),
-                 color='white', label='dist :'+legend)
+                 color='white')
         plt.legend()
         plt.axis('equal')
         plt.show()
@@ -118,7 +118,7 @@ def lvl7(X, show=False, legend='lvl7', time_to_plot=5):
     return dist
 
 
-def lvl8(X, show=False, legend='lvl8', time_to_plot=5):
+def lvl8(X, show=False, time_to_plot=5):
     """Dimension minimale 20, la dimension doit toujours être pair"""
     dist = 0
     nb_point = len(X)/2
@@ -132,14 +132,14 @@ def lvl8(X, show=False, legend='lvl8', time_to_plot=5):
         for i in range(0, len(X), 2):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
-        plt.plot(np.cos(theta)*(1+np.cos(theta)), np.sin(theta) * (1+np.cos(theta)), color='white', label='dist :'+legend)
+        plt.plot(np.cos(theta)*(1+np.cos(theta)), np.sin(theta) * (1+np.cos(theta)), color='white')
         plt.legend()
         plt.show()
         plt.pause(time_to_plot)
     return dist
 
 
-def lvl9(X, show=False, legend='lvl9', time_to_plot=5):
+def lvl9(X, show=False, time_to_plot=5):
     """Dimension minimale 40, la dimension doit toujours être pair"""
     dist = 0
     nb_point = len(X)/2
@@ -154,14 +154,14 @@ def lvl9(X, show=False, legend='lvl9', time_to_plot=5):
         for i in range(0, len(X), 2):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
-        plt.plot(16*np.sin(theta)**3, 13*np.cos(theta)-6*np.cos(2*theta)-2 * np.cos(3*theta)-np.cos(4*theta), color='white', label='dist :'+legend)
+        plt.plot(16*np.sin(theta)**3, 13*np.cos(theta)-6*np.cos(2*theta)-2 * np.cos(3*theta)-np.cos(4*theta), color='white')
         plt.legend()
         plt.show()
         plt.pause(time_to_plot)
     return dist
 
 
-def lvl10(X, show=False, legend='lvl10', time_to_plot=5):
+def lvl10(X, show=False, time_to_plot=5):
     """Dimension minimale 80, la dimension doit toujours être pair"""
     def f1(x): return (abs(x)/x)*(abs(x) - .5*abs(abs(x)-2) - .25*abs(abs(x)-2) - .25*abs(abs(x)-4) + (23/8)*(abs(abs(x)-8)-abs(abs(x)-12)) - (29/10)
                                   * (abs(abs(x)-16)-abs(abs(x)-21)) + .25*((abs(abs(x)-12)-abs(abs(x)-16)-2)**2) - 10*np.cos((np.pi/16)*(abs(abs(x)-4)-abs(abs(x)-8)+12)) - 10)
@@ -179,7 +179,7 @@ def lvl10(X, show=False, legend='lvl10', time_to_plot=5):
         for i in range(0, len(X), 2):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(-21, 21, 100)
-        plt.plot(f1(theta), f2(theta), color='white', label='dist :'+legend)
+        plt.plot(f1(theta), f2(theta), color='white')
         plt.legend()
         plt.show()
         plt.pause(time_to_plot)
