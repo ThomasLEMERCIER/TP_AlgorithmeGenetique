@@ -48,6 +48,8 @@ Ensemble des fonctions à completer se trouve dans le fichier individual_vector.
 
 Ensemble des fonctions à completer se trouve dans le fichier AlgoGen.py.
 
+On implémentera l'algorithme génétique pour maximiser la fonction de fitness.
+
 #### Méthode d'initialisation :
 1. Définir les attributs nécessaires
     <details>
