@@ -4,27 +4,33 @@
 
 ### Compléter la définition de la classe d'un individu vectoriel
 
-Ensemble des fonctions à completer se trouve dans le fichier individual_vector.py.
+L'ensemble des fonctions à completer se trouve dans le fichier individual_vector.py.
 
 #### Méthode d'initialisation
 1. Définir les attributs nécessaires
     <details>
     <summary>Spoiler warning</summary>
     
-    * Dimension du vecteur (shape)
-    * Interval de recherche (starting_interval)
-    * Score de l'individu (fitness_score)
-    * Fonction de score (fitness_function)
-    * Chromosomes de l'individu (chromosomes)
+    * Dimension du vecteur (_shape_)
+    * Interval de recherche (_starting_interval_)
+    * Score de l'individu (_fitness_score_)
+    * Fonction de score (_fitness_function_)
+    * Chromosomes de l'individu (_chromosomes_)
     
     </details>
 
-2. Création du chromosome associé à l'individu
+2. Création des chromosomes associés à l'individu
+   <details>
+    <summary>Spoiler warning</summary>
+    
+    * Création d'un array numpy de taille shape contenant des réels aléatoires compris dans l'interval _starting_interval_
+    
+    </details>
 3. Initialialisation du score de l'individu
 
 #### Méthode de crossover
 
-1. Pour commencer la moyenne pour chaque composantes devrait suffire
+1. Pour commencer une moyenne pondérée entre _self_ et _individual_ sur chaque composantes devrait suffire
     <details>
     <summary>Spoiler warning</summary>
     
@@ -34,21 +40,20 @@ Ensemble des fonctions à completer se trouve dans le fichier individual_vector.
 
 #### Méthode de mutation
 
+
 1. Libre à vous de choisir quelle fonction de bruit utiliser
     <details>
     <summary>Spoiler warning</summary>
     
     * Une gaussienne donne des résultats satisfaisants
-    * Ne pas oublier de calculer le score des enfants
+    * Ne pas oublier de mettre à jour le score de l'individu
     
     </details>
 
 
 ### Completer la définition de la classe de l'algorithme génétique
 
-Ensemble des fonctions à completer se trouve dans le fichier AlgoGen.py.
-
-On implémentera l'algorithme génétique pour maximiser la fonction de fitness.
+L'ensemble des fonctions à completer se trouve dans le fichier AlgoGen.py.
 
 #### Méthode d'initialisation :
 1. Définir les attributs nécessaires
@@ -63,6 +68,17 @@ On implémentera l'algorithme génétique pour maximiser la fonction de fitness.
     
     </details>
 2. Génération de la population initiale
+   <details>
+    <summary>Spoiler warning</summary>
+    
+    * On créé une liste contenant les individus voulus grâce à l'argument _Indiv_ de la fonction _init_
+    qui correspond à la classe _individual\_vector_ ou _individual\_vector_ en fonction des besoins.
+
+    Exemple : 
+
+        Indiv(shape=shape, fitness_function=fitness_function, starting_interval=starting_interval)
+    
+    </details>
 
 
 #### Méthode _parents_selection_  : Sélection des parents
@@ -108,7 +124,7 @@ Pour n = 5,
 
 [1,2,3,4,0] -> Le voyageur commence à la ville 1 puis 2 etc... jusqu'à revenir en 1 après la ville 0.
 
-Ensemble des fonctions à completer se trouve dans le fichier individual_path.py.
+L'ensemble des fonctions à completer se trouve dans le fichier individual_path.py.
 
 ### Completer la définition de la classe d'un individu chemin
 

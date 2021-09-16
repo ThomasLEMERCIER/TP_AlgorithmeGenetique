@@ -109,9 +109,7 @@ def lvl7(X, show=False, time_to_plot=5):
         for i in range(0, len(X), 2):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
-        plt.plot(np.cos(theta), np.sin(theta),
-                 color='white')
-        plt.legend()
+        plt.plot(np.cos(theta), np.sin(theta), color='white')
         plt.axis('equal')
         plt.show()
         plt.pause(time_to_plot)
@@ -133,7 +131,6 @@ def lvl8(X, show=False, time_to_plot=5):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
         plt.plot(np.cos(theta)*(1+np.cos(theta)), np.sin(theta) * (1+np.cos(theta)), color='white')
-        plt.legend()
         plt.show()
         plt.pause(time_to_plot)
     return dist
@@ -155,7 +152,6 @@ def lvl9(X, show=False, time_to_plot=5):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(0, 2*np.pi, 100)
         plt.plot(16*np.sin(theta)**3, 13*np.cos(theta)-6*np.cos(2*theta)-2 * np.cos(3*theta)-np.cos(4*theta), color='white')
-        plt.legend()
         plt.show()
         plt.pause(time_to_plot)
     return dist
@@ -180,7 +176,6 @@ def lvl10(X, show=False, time_to_plot=5):
             plt.scatter(X[i], X[i+1], color='r')
         theta = np.linspace(-21, 21, 100)
         plt.plot(f1(theta), f2(theta), color='white')
-        plt.legend()
         plt.show()
         plt.pause(time_to_plot)
     return dist
