@@ -72,7 +72,7 @@ L'ensemble des fonctions à completer se trouve dans le fichier AlgoGen.py.
     <summary>Spoiler warning</summary>
     
     * On créé une liste contenant les individus voulus grâce à l'argument _Indiv_ de la fonction _init_
-    qui correspond à la classe _individual\_vector_ ou _individual\_vector_ en fonction des besoins.
+    qui correspond à la classe _individual\_vector_ ou _individual\_path_ en fonction des besoins.
 
     Exemple : 
 
