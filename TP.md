@@ -12,7 +12,7 @@ L'ensemble des fonctions à completer se trouve dans le fichier individual_vecto
     <summary>Spoiler warning</summary>
     
     * Dimension du vecteur (_shape_)
-    * Interval de recherche (_starting_interval_)
+    * Intervalle de recherche (_starting_interval_)
     * Score de l'individu (_fitness_score_)
     * Fonction de score (_fitness_function_)
     * Chromosomes de l'individu (_chromosomes_)
@@ -23,7 +23,7 @@ L'ensemble des fonctions à completer se trouve dans le fichier individual_vecto
    <details>
     <summary>Spoiler warning</summary>
     
-    * Création d'un array numpy de taille shape contenant des réels aléatoires compris dans l'interval _starting_interval_
+    * Création d'un array numpy de taille shape contenant des réels aléatoires compris dans l'intervalle _starting_interval_
     
     </details>
 3. Initialialisation du score de l'individu
