@@ -133,7 +133,7 @@ L'ensemble des fonctions à completer se trouve dans le fichier individual_path.
     <details>
     <summary>Spoiler warning</summary>
     
-    * Nombre de ville (shape)
+    * Nombre de villes (shape)
     * Score de l'individu (fitness_score)
     * Fonction de fitness (fitness_function)
     * Chromosomes de l'individu (chromosomes)
@@ -146,7 +146,7 @@ L'ensemble des fonctions à completer se trouve dans le fichier individual_path.
 
 #### Méthode de crossover
 
-1. En première intention on peux prendre deux nouveux individus aléatoires
+1. En première intention on peut prendre deux nouveux individus aléatoires
 
 #### Méthode de mutation
 
