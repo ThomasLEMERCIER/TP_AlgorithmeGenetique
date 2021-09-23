@@ -12,7 +12,8 @@ L'ensemble des fonctions à completer se trouve dans le fichier individual_vecto
     <summary>Spoiler warning</summary>
     
     * Dimension du vecteur (_shape_)
-    * Intervalle de recherche (_starting_interval_)
+    * Intervalle de recherche (_starting_interval_), l'implémentation est libre mais si vous ne savez pas comment faire un simple réel fera l'affaire.
+    On prendra par exemple, ensuite chaque composante du vecteur de chromosomes dans [-_starting_interval_, _starting_interval_].
     * Score de l'individu (_fitness_score_)
     * Fonction de score (_fitness_function_)
     * Chromosomes de l'individu (_chromosomes_)
