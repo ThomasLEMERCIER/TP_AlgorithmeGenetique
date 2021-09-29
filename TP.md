@@ -27,7 +27,7 @@ Définition et initialisation les attributs nécessaires. Ce sont les attributs 
 * Dimension du vecteur (_shape_)
 * Intervalle de recherche (_starting_interval_), l'implémentation est libre mais si vous ne savez pas comment faire un simple réel fera l'affaire.
 On prendra par exemple, ensuite chaque composante du vecteur de chromosomes dans [-_starting_interval_; _starting_interval_]. 
-* Chromosomes de l'individu (_chromosomes_), comme déjà préciser on utilisera la bibliothèque numpy pour représenter un vecteur grâce à un array numpy. On chercher donc à créer un array numpy de taille shape contenant des réels aléatoires compris dans l'intervalle [-_starting_interval_; _starting_interval_].
+* Chromosomes de l'individu (_chromosomes_), comme déjà précisé on utilisera la bibliothèque numpy pour représenter un vecteur grâce à un array numpy. On chercher donc à créer un array numpy de taille shape contenant des réels aléatoires compris dans l'intervalle [-_starting_interval_; _starting_interval_].
     <details>
     <summary>Spoiler warning</summary>
     On peut utiliser la fonction numpy : numpy.random.uniform.
@@ -83,7 +83,7 @@ L'ensemble des fonctions à compléter se trouve dans le fichier AlgoGen.py.
 
 On va maintenant chercher à implémenter l'algorithme génétique. On veut implémenter un algorithme général qui pourra optimiser n'importe quelle fonction et donc sur n'importe quel type d'individu pour peu qu'il suive la même structure que notre Individual_vector.
 
-On prend également comme déjà énoncer le cadre dans lequel l'algorithme génétique cherche à `maximiser` la fonction de fitness quitte à optimiser -f pour un problème de minimisation.
+On prend également comme déjà énoncé, on se place dans le cadre dans lequel l'algorithme génétique cherche à `maximiser` la fonction de fitness quitte à optimiser -f pour un problème de minimisation.
 
 ### 1. Méthode d'initialisation :
 
@@ -193,7 +193,7 @@ Définition et initialisation les attributs nécessaires. Ce sont les attributs 
 * Nombre de villes (shape)
 * Score de l'individu (fitness_score)
 * Fonction de fitness (fitness_function)
-* Chromosomes de l'individu (chromosomes), comme énoncer les chromosomes de l'individu sont une permutation de [0;shape-1].
+* Chromosomes de l'individu (chromosomes), comme énoncé les chromosomes de l'individu sont une permutation de [0;shape-1].
 
 <details>
 <summary>Spoiler warning</summary>
