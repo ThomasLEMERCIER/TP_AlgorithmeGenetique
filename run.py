@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from AlgoGen import AlgoGen
-from individual_path import Individual_path
-from individual_vector import Individual_vector
 from test_functions import *
 from tsp import distance_path, estimate_time
 
 def function_optimization(function, nEpochs, shape, pop_size, mutation_rate, crossover_rate, starting_interval, render=True):
+
+    from individual_vector import Individual_vector
 
     fitness_function = lambda x : -function(x) * 1e-3
 
@@ -50,6 +50,7 @@ def function_optimization(function, nEpochs, shape, pop_size, mutation_rate, cro
     plt.plot(epochs, max_fitness, label='Max fitness')
     plt.plot(epochs, avg_fitness, label='Average fitness')
     plt.title("Fitness over generation")
+    plt.legend()
     function(algo_gen.best_indv.chromosomes, render, 5)
 
 
@@ -57,6 +58,8 @@ def function_optimization(function, nEpochs, shape, pop_size, mutation_rate, cro
 
 def tsp(nEpochs, shape, pop_size, mutation_rate, crossover_rate, method='random', estimated_time=True, render=True):
 
+    from individual_path import Individual_path
+    
     if method == 'random':
         cities = np.array([[random.random()*100, random.random()*100] for _ in range(shape)])
     elif method == 'square':
@@ -64,10 +67,6 @@ def tsp(nEpochs, shape, pop_size, mutation_rate, crossover_rate, method='random'
             cities = np.array([[x, y] for x in range(root_nCities) for y in range(root_nCities)])
         else:
             raise ValueError(f"To use the square method the shape must be a perfect square : {shape}")
-    elif method == 'polynomial':
-        x = np.linspace(-1, 1, shape)
-        y = x**2
-        cities = np.stack((x, y), axis=-1)
     else:
         NotImplementedError(f"The following method to create cities is not implemented : {method}")
 
@@ -112,6 +111,7 @@ def tsp(nEpochs, shape, pop_size, mutation_rate, crossover_rate, method='random'
     plt.plot(epochs, max_fitness, label='Max fitness')
     plt.plot(epochs, avg_fitness, label='Average fitness')
     plt.title("Fitness over generation")
+    plt.legend()
     plt.show()
     print(f"\nTime elapsed : {stop-top:.3f}s")
 
@@ -129,5 +129,13 @@ def tsp(nEpochs, shape, pop_size, mutation_rate, crossover_rate, method='random'
         print(f"Time estimated to get exact solution : {chrono:.3e}s")
 
 if __name__ == "__main__":
+    """
+    Pour lancer le fichier décommenter la ligne:
+    - function_optimization pour optimiser sur les fonctions définies dans test_functions (Partie I du TP : lvl1 à lvl6)
+    (se référer au fichier pour connaître les dimensions des variables d'entrée des fonctions).
+    - tsp pour optimiser sur le problème du voyageur de commerce.
+    
+    """
 
-    function_optimization(function=lvl1, nEpochs=100, shape=1, pop_size=100, mutation_rate=0.2, crossover_rate=0.9, starting_interval=20)
+    # function_optimization(function=lvl1, nEpochs=100, shape=1, pop_size=100, mutation_rate=0.2, crossover_rate=0.9, starting_interval=20)
+    # tsp(nEpochs=100, shape=10, pop_size=100, mutation_rate=0.2, crossover_rate=0.9)
